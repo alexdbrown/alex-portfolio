@@ -1,0 +1,51 @@
+<?php
+
+function favorites_menu()
+{
+    $items = array();
+    $items['favorite_movies'] = array(
+        'title' => "Austin's Favorite Movies",
+        'page callback' => 'movies_display',
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+        );
+
+    $items['favorite_books'] = array(
+        'title' => "Austin's Favorite Books",
+        'page callback' => 'books_display',
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+        );
+
+    $items['favorite_songs'] = array(
+        'title' => "Austin's Favorite Songs",
+        'page callback' => 'songs_display',
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+        );
+    return $items;
+}
+
+function movies_display() {
+    return "<ul>
+        <li>Indiana Jones: Raiders of the Lost Arc</li>
+        <li>Bluez Cluez: Bluez Cluez In The Big City</li>
+        <li>Look Who's Talking Now 2</li>
+    </ul>";
+}
+
+function books_display() {
+    return "<ul>
+        <li>Indiana Jones: Raiders of the Lost Arc</li>
+        <li>Bluez Cluez: Bluez Cluez In The Big City</li>
+        <li>Look Who's Talking Now 2</li>
+    </ul>";
+}
+
+function songs_display() {
+    return "<ul>
+        <li>Indiana Jones: Raiders of the Lost Arc</li>
+        <li>Bluez Cluez: Bluez Cluez In The Big City</li>
+        <li>Look Who's Talking Now 2</li>
+    </ul>";
+}
